@@ -1,8 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="google-site-verification" content="qYSvh_x1hsm-Qz9jsb3i2WjHTNWNmg1atxBfGS9-Pac" />
     <title>UjjwalCreativeSpace | Motivation & Quotes</title>
+
+    <!-- SEO Tags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Daily motivation quotes, success mindset tips, and inspiration to grow your life.">
+    <meta name="keywords" content="motivation, quotes, success, mindset, inspiration">
+    <meta name="author" content="UjjwalCreativeSpace">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="UjjwalCreativeSpace | Motivation & Quotes">
+    <meta property="og:description" content="Get daily motivation quotes and success mindset ideas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ujjwalstack.github.io/my-website/">
+
     <style>
         body {
             font-family: Arial;
@@ -17,8 +30,6 @@
             text-align: center;
         }
 
-        h1 { margin: 0; font-size: 32px; }
-
         .container {
             padding: 20px;
         }
@@ -30,11 +41,6 @@
             width: 85%;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: scale(1.02);
         }
 
         .button {
@@ -47,21 +53,22 @@
             font-weight: bold;
         }
 
-        .button:hover {
-            background: #cc001f;
+        /* Pinterest Style Grid */
+        .image-grid {
+            column-count: 3;
+            column-gap: 15px;
         }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
+        .image-grid img {
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
         }
 
-        .quote {
-            background: #fff0f3;
-            padding: 15px;
-            border-radius: 8px;
-            font-weight: bold;
+        .image-grid img:hover {
+            transform: scale(1.03);
         }
 
         footer {
@@ -69,6 +76,18 @@
             padding: 15px;
             background: #222;
             color: white;
+        }
+
+        @media(max-width: 768px) {
+            .image-grid {
+                column-count: 2;
+            }
+        }
+
+        @media(max-width: 480px) {
+            .image-grid {
+                column-count: 1;
+            }
         }
     </style>
 </head>
@@ -83,24 +102,22 @@
 <div class="container">
 
     <div class="card">
-        <h2>🔥 Quote of the Day</h2>
-        <p><b>"Discipline is what separates winners from everyone else."</b></p>
-    </div>
-
-    <div class="card">
         <h2>📌 Follow Me on Pinterest</h2>
         <a class="button" href="https://pin.it/5M3c6E9Pp" target="_blank">
             Visit My Pinterest
         </a>
     </div>
 
+    <!-- Image Section -->
     <div class="card">
-        <h2>💡 Trending Quotes</h2>
-        <div class="grid">
-            <div class="quote">💬 Dream big. Start now.</div>
-            <div class="quote">💬 Stay consistent.</div>
-            <div class="quote">💬 Don’t quit.</div>
-            <div class="quote">💬 Focus on your goal.</div>
+        <h2>🔥 Motivation Gallery</h2>
+        <div class="image-grid">
+            <img src="https://picsum.photos/300/400?random=1">
+            <img src="https://picsum.photos/300/500?random=2">
+            <img src="https://picsum.photos/300/350?random=3">
+            <img src="https://picsum.photos/300/450?random=4">
+            <img src="https://picsum.photos/300/420?random=5">
+            <img src="https://picsum.photos/300/480?random=6">
         </div>
     </div>
 
