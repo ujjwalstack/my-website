@@ -3,18 +3,12 @@
 <head>
     <title>UjjwalCreativeSpace | Motivation & Quotes</title>
 
-    <!-- SEO Tags -->
+    <!-- SEO -->
     <meta charset="UTF-8">
     <meta name="description" content="Daily motivation quotes, success mindset tips, and inspiration to grow your life.">
     <meta name="keywords" content="motivation, quotes, success, mindset, inspiration">
     <meta name="author" content="UjjwalCreativeSpace">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="UjjwalCreativeSpace | Motivation & Quotes">
-    <meta property="og:description" content="Get daily motivation quotes and success mindset ideas.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ujjwalstack.github.io/my-website/">
 
     <style>
         body {
@@ -24,10 +18,15 @@
         }
 
         header {
-            background: linear-gradient(to right, #e60023, #ff4d6d);
+            background: linear-gradient(to right, #ff0033, #ff4d6d);
             color: white;
             padding: 50px 20px;
             text-align: center;
+            animation: fadeIn 1.5s ease;
+        }
+
+        h1 {
+            margin: 0;
         }
 
         .container {
@@ -41,6 +40,7 @@
             width: 85%;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            animation: slideUp 1s ease;
         }
 
         .button {
@@ -51,24 +51,44 @@
             text-decoration: none;
             border-radius: 6px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
-        /* Pinterest Style Grid */
+        .button:hover {
+            background: #b8001c;
+            transform: scale(1.05);
+        }
+
+        /* Image Grid */
         .image-grid {
-            column-count: 3;
-            column-gap: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
         }
 
         .image-grid img {
             width: 100%;
-            margin-bottom: 15px;
             border-radius: 10px;
             transition: 0.3s;
-            cursor: pointer;
         }
 
         .image-grid img:hover {
-            transform: scale(1.03);
+            transform: scale(1.05);
+        }
+
+        /* Quotes */
+        .quotes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .quote {
+            background: #fff0f3;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-align: center;
         }
 
         footer {
@@ -78,15 +98,20 @@
             color: white;
         }
 
-        @media(max-width: 768px) {
-            .image-grid {
-                column-count: 2;
-            }
+        /* Animations */
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
         }
 
-        @media(max-width: 480px) {
-            .image-grid {
-                column-count: 1;
+        @keyframes slideUp {
+            from {
+                transform: translateY(40px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
             }
         }
     </style>
@@ -108,17 +133,30 @@
         </a>
     </div>
 
-    <!-- Image Section -->
-    <div class="image-grid">
-    <a href="https://pin.it/5M3c6E9Pp" target="_blank">
-        <img src="img1.png" alt="Motivation Image 1">
-    </a>
+    <div class="card">
+        <h2>🔥 Motivation Gallery</h2>
+        <div class="image-grid">
 
-    <a href="https://pin.it/5M3c6E9Pp" target="_blank">
-        <img src="img2.png" alt="Motivation Image 2">
-    </a>
-</div>
-            
+            <a href="https://pin.it/5M3c6E9Pp" target="_blank">
+                <img src="img1.png" alt="Motivation Image 1">
+            </a>
+
+            <a href="https://pin.it/5M3c6E9Pp" target="_blank">
+                <img src="img2.png" alt="Motivation Image 2">
+            </a>
+
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>💡 Daily Quotes</h2>
+        <div class="quotes">
+            <div class="quote">Dream big. Start now.</div>
+            <div class="quote">Discipline beats motivation.</div>
+            <div class="quote">Stay consistent.</div>
+            <div class="quote">Success is built daily.</div>
+            <div class="quote">Don’t quit.</div>
+            <div class="quote">Believe in yourself.</div>
         </div>
     </div>
 
